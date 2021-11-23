@@ -12,7 +12,7 @@ import (
 // SSH客户端
 func main() {
 	config := &ssh.ClientConfig{
-		User: "*****", // 登录名
+		User: "********", // 登录名
 		Auth: []ssh.AuthMethod{
 			ssh.Password("****"), // 密码
 		},
@@ -44,7 +44,7 @@ func main() {
 	session.Stdin = os.Stdin
 
 	modes := ssh.TerminalModes{
-		ssh.ECHO:          0,     // disable echoing
+		ssh.ECHO:          1,     // disable echoing
 		ssh.TTY_OP_ISPEED: 14400, // input speed = 14.4kbaud
 		ssh.TTY_OP_OSPEED: 14400, // output speed = 14.4kbaud
 	}
